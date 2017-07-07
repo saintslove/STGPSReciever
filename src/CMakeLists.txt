@@ -1,0 +1,6 @@
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../muduo/Debug/   ${CMAKE_CURRENT_SOURCE_DIR}/../../BATNetSDK/Debug/ ${CMAKE_CURRENT_SOURCE_DIR}/../../STGPSProtocol/build/lib)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../muduo ${CMAKE_CURRENT_SOURCE_DIR}/../../Include/  ${CMAKE_CURRENT_SOURCE_DIR}/../../STGPSProtocol/src)
+set(SOURCE_FILES STGPSReciever.cpp STGPSReciever.h Server.cpp)
+add_executable(STGPSReciever ${SOURCE_FILES})
+target_link_libraries(STGPSReciever STGPSProtocol muduo BATNetSDK pthread)
+#set(EXECUTABLE_OUTPUT_PATH  ${PROJECT_BINARY_DIR}/bin)
